@@ -15,4 +15,5 @@
 
     <color name="disabled_text_color">#66000000</color>
     <color name="homepage_hub_background">#ff5252</color>
+    <color name="morph_parts_icon_tint">@*android:color/accent_device_default_light</color>
 </resources>

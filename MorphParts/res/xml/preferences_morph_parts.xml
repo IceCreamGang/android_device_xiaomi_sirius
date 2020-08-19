@@ -232,7 +232,7 @@
             android:key="dirac_headset_pref"
             android:summary="%s"
             android:title="@string/dirac_headset_title"
-            android:icon="@drawable/ic_headphones" />
+            android:icon="@drawable/ic_headphone" />
 
         <com.xiaomi.morphparts.SecureSettingListPreference
             android:defaultValue="0,0,0,0,0,0,0"

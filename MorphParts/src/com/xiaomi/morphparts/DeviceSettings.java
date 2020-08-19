@@ -35,6 +35,7 @@ import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
+import com.xiaomi.morphparts.YellowFlashPreference;
 
 import com.xiaomi.morphparts.CustomSeekBarPreference;
 import com.xiaomi.morphparts.SecureSettingListPreference;
@@ -62,6 +63,8 @@ public class DeviceSettings extends PreferenceFragment implements
 
     public static final String PREF_SPECTRUM = "spectrum";
     public static final String SPECTRUM_SYSTEM_PROPERTY = "persist.spectrum.profile";
+
+    public static final String KEY_FLASH = "yellow_flash";
 
     public static final String PREF_HEADPHONE_GAIN = "headphone_gain";
     public static final String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
@@ -116,6 +119,7 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String PREF_SELINUX_MODE = "selinux_mode";
     private static final String PREF_SELINUX_PERSISTENCE = "selinux_persistence";
 
+    private YellowFlashPreference mYellowFlash;
     private VibratorStrengthPreference mVibratorStrength;
     private SecureSettingListPreference mSPECTRUM;
     private CustomSeekBarPreference mHeadphoneGain;
@@ -197,6 +201,11 @@ public class DeviceSettings extends PreferenceFragment implements
 
         mMicrophoneGain = (CustomSeekBarPreference) findPreference(PREF_MICROPHONE_GAIN);
         mMicrophoneGain.setOnPreferenceChangeListener(this);
+
+        mYellowFlash = (YellowFlashPreference) findPreference(KEY_FLASH);
+        if (mYellowFlash != null) {
+            mYellowFlash.setEnabled(YellowFlashPreference.isSupported());
+        }
 
         mSpeakerGain = (CustomSeekBarPreference) findPreference(PREF_SPEAKER_GAIN);
         mSpeakerGain.setOnPreferenceChangeListener(this);

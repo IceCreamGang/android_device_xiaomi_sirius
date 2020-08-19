@@ -1,0 +1,2 @@
+# MorphParts
+allow init su:process { noatsecure  rlimitinh  siginh  transition };

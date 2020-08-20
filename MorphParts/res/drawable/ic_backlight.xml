@@ -15,7 +15,8 @@
     android:height="24dp"
     android:width="24dp"
     android:viewportHeight="24"
-    android:viewportWidth="24">
+    android:viewportWidth="24"
+    android:tint="@color/morph_parts_icon_tint">
 
 	<path
         android:fillColor="?android:attr/colorControlNormal"

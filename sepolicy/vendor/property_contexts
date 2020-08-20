@@ -23,3 +23,12 @@ persist.vendor.sys.pay.ifaa              u:object_r:vendor_tee_listener_prop:s0
 
 # Thermal
 sys.thermal.               u:object_r:thermal_engine_prop:s0
+
+# MorphParts
+persist.gpuboost.profile           u:object_r:gpuboost_prop:s0
+persist.cpuboost.profile           u:object_r:cpuboost_prop:s0
+persist.cpucore.profile            u:object_r:cpucore_prop:s0
+persist.lkm.profile		   u:object_r:lkm_prop:s0
+persist.tcp.profile		   u:object_r:tcp_prop:s0
+persist.spectrum.profile           u:object_r:spectrum_prop:s0
+persist.audio.dirac                           u:object_r:dirac_prop:s0

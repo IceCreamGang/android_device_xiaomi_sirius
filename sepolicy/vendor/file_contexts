@@ -39,3 +39,18 @@
 # Persist files
 /mnt/vendor/persist/audio(/.*)?               u:object_r:persist_audio_file:s0
 /mnt/vendor/persist/camera(/.*)?              u:object_r:persist_camera_file:s0
+
+# MorphParts
+/sys/kernel/sound_control/speaker_gain			 u:object_r:sysfs_sgain:s0
+/sys/kernel/sound_control/headphone_gain		 u:object_r:sysfs_hgain:s0
+/sys/kernel/sound_control/mic_gain			 u:object_r:sysfs_mgain:s0
+/sys/kernel/fast_charge/force_fast_charge		 u:object_r:sysfs_fcharge:s0
+/sys/module/msm_performance/parameters/touchboost		u:object_r:sysfs_touchboost:s0
+/sys/module/snd_soc_wcd9330/parameters/high_perf_mode		u:object_r:sysfs_highperfaudio:s0
+/sys/module/msm_thermal/core_control/enabled		u:object_r:sysfs_corecontrol:s0
+/sys/module/msm_thermal/parameters/enabled		u:object_r:sysfs_msmthermal:s0
+/sys/module/msm_thermal/vdd_restriction/enabled		u:object_r:sysfs_vddrestrict:s0
+/sys/devices/soc/qpnp-flash-led-23/driver/qpnp-flash-led-23/leds/led:torch_0/max_brightness	u:object_r:sysfs_tbrightness:s0
+/sys/devices/soc/qpnp-flash-led-23/driver/qpnp-flash-led-23/leds/led:torch_1/max_brightness	u:object_r:sysfs_tbrightness:s0
+/sys/class/drm/sde-crtc-0/measured_fps                              u:object_r:sysfs_fps:s0
+/sys/devices/soc/qpnp-flash-led-25/driver/qpnp-flash-led-25/leds/led:flash_1/max_brightness		u:object_r:sysfs_yintensity:s0

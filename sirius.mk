@@ -406,3 +406,15 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# MorphParts
+PRODUCT_PACKAGES += \
+    MorphParts \
+    init.gpuboost.rc \
+    init.gpuboost.sh \
+    init.cpuboost.rc \
+    init.cpuboost.sh \
+    init.morphparts.rc \
+    init.morphparts.sh \
+    init.spectrum.rc \
+    init.spectrum.sh

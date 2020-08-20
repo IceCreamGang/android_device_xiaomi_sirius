@@ -219,3 +219,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ssr.enable_ramdumps=0 \
     persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# MorphParts
+PRODUCT_PROPERTY_OVERRIDES += \
+    spectrum.support=1 \
+    persist.spectrum.kernel=morphparts \
+    persist.dirac.acs.controller=qem \
+    persist.dirac.acs.storeSettings=1 \
+    persist.dirac.acs.ignore_error=1 \
+    ro.audio.soundfx.dirac=true \
+    persist.audio.dirac.speaker=true

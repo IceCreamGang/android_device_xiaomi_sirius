@@ -49,15 +49,15 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String TAG = "MorphParts";
 
     public static final String PREF_BACKLIGHT_DIMMER = "backlight_dimmer";
-    public static final String BACKLIGHT_DIMMER_PATH = "/sys/module/mdss_fb/parameters/backlight_dimmer";
+    public static final String BACKLIGHT_DIMMER_PATH = "/sys/class/backlight/panel0-backlight/max_brightness";
 
     public static final String VIBRATION_KEY = "vtg";
     public static final String PREF_VIBRATION_SYSTEM_STRENGTH = "vibration_system";
     public static final String PREF_VIBRATION_NOTIFICATION_STRENGTH = "vibration_notification";
     public static final String PREF_VIBRATION_CALL_STRENGTH = "vibration_call";
-    public static final String VIBRATION_SYSTEM_PATH = "/sys/class/leds/vibrator/vmax_mv_user";
-    public static final String VIBRATION_NOTIFICATION_PATH = "/sys/class/leds/vibrator/vmax_mv_strong";
-    public static final String VIBRATION_CALL_PATH = "/sys/class/leds/vibrator/vmax_mv_call";
+    public static final String VIBRATION_SYSTEM_PATH = "/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-01/c440000.qcom,spmi:qcom,pm660@1:qcom,haptics@c000/leds/vibrator/vmax_mv_user";
+    public static final String VIBRATION_NOTIFICATION_PATH = "/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-01/c440000.qcom,spmi:qcom,pm660@1:qcom,haptics@c000/leds/vibrator/vmax_mv_strong";
+    public static final String VIBRATION_CALL_PATH = "/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-01/c440000.qcom,spmi:qcom,pm660@1:qcom,haptics@c000/leds/vibrator/vmax_mv_call";
     public static final int MIN_VIBRATION = 116;
     public static final int MAX_VIBRATION = 3596;
 
@@ -91,10 +91,10 @@ public class DeviceSettings extends PreferenceFragment implements
 
     public static final String PERF_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
     public static final String PERF_WHITE_TORCH_BRIGHTNESS = "white_torch_brightness";
-    public static final String TORCH_YELLOW_BRIGHTNESS_PATH = "/sys/devices/soc/200f000.qcom," +
-            "spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_0/max_brightness";
-    public static final String TORCH_WHITE_BRIGHTNESS_PATH = "/sys/devices/soc/200f000.qcom," +
-            "spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,leds@d300/leds/led:torch_1/max_brightness";
+    public static final String TORCH_YELLOW_BRIGHTNESS_PATH = "/sys/devices/platform/soc/c440000.qcom," +
+            "spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/max_brightness";
+    public static final String TORCH_WHITE_BRIGHTNESS_PATH = "/sys/devices/platform/soc/c440000.qcom," +
+            "spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/max_brightness";
 
     public static final String HIGH_PERF_AUDIO = "highperfaudio";
     public static final String HIGH_AUDIO_PATH = "/sys/module/snd_soc_wcd9330/parameters/high_perf_mode";

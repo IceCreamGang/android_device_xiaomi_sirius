@@ -287,8 +287,11 @@ on boot
 
     # Backlight dimmer
     chown system system /sys/class/backlight/panel0-backlight/brightness
+    chmod 0660 /sys/class/backlight/panel0-backlight/brightness
     chown system system /sys/class/backlight/panel0-backlight/max_brightness
-
+    chmod 0660 /sys/class/backlight/panel0-backlight/max_brightness
+    write /sys/class/backlight/panel0-backlight/max_brightness 200
+    
     # USB fastcharge
     chown system system /sys/kernel/fast_charge/force_fast_charge
     chmod 0660 /sys/kernel/fast_charge/force_fast_charge
